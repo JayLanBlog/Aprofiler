@@ -1,0 +1,77 @@
+#pragma once
+#include <device/gpu/gl/common/gl_gpu_define.h>
+#include <string>
+#include <stb_image.h>
+#include <device/gpu/gl/common/gl_gpu_define.h>
+#include <iostream>
+namespace APROFILER {
+
+	namespace GL {
+
+		class Texture {
+		public:
+			Texture() = default;
+			void Use() {
+				glBindTexture(GL_TEXTURE_2D, texture_id);
+			}
+
+			void Cretate() {
+				glGenTextures(1, &texture_id);
+			}
+
+			void Load(std::string path) {
+				mPath = path;
+				Cretate();
+				unsigned char* data = stbi_load(path.c_str(), &width, &height, &nrComponents, 0);
+				if (data) {
+					if (nrComponents == 1)
+						color = ColorSpace::RED;
+					else if (nrComponents == 3)
+						color = ColorSpace::RGB;
+					else if (nrComponents == 4)
+						color = ColorSpace::RGBA;
+					minFilter = TextureFilter::MIPMAP_LINEAR;
+					//generateTexture(data);
+					Make(data);
+					stbi_image_free(data);
+				}
+				else {
+					std::cout << "Texture failed to load at path: " << path << std::endl;
+					stbi_image_free(data);
+				}
+			}
+			
+			void Make(void* data) {
+				Use();
+				glTexImage2D(GL_TEXTURE_2D, 0, COLOR_SPACE[static_cast<int>(color)], width, height, 0, COLOR_SPACE[static_cast<int>(color)], DATATYPES[static_cast<int>(type)], data);
+				//	PFNGLGENERATEMIPMAPPROC();
+				glGenerateMipmap(GL_TEXTURE_2D);
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, TEXTURE_WRAPS[static_cast<int>(sWrap)]);
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, TEXTURE_WRAPS[static_cast<int>(tWrap)]);
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, TEXTUREFILTERS[static_cast<int>(minFilter)]);
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, TEXTUREFILTERS[static_cast<int>(magFilter)]);
+			}
+
+			void ConfigTexture(TextureFilter min, TextureFilter mag, Wrap s, Wrap t, ColorSpace colorSpace, DataType dType) {
+				minFilter = min;
+				magFilter = mag;
+				sWrap = s;
+				tWrap = t;
+				color = colorSpace;
+				type = dType;
+			}
+			std::string name;
+		private:
+			
+			std::string mPath;
+			int width = 0, height = 0, nrComponents = 0;
+			unsigned int texture_id = 0;
+			ColorSpace color = ColorSpace::RGB;
+			DataType type = DataType::UNSIGNED_BYTE;
+			TextureFilter minFilter = TextureFilter::MIPMAP_LINEAR;
+			TextureFilter magFilter = TextureFilter::LINEAR;
+			Wrap sWrap = Wrap::REPEAT;
+			Wrap tWrap = Wrap::REPEAT;
+		};
+	}
+}

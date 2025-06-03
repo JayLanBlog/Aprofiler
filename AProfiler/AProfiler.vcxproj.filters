@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{2818af12-ca9f-4fdb-bd13-886ff4d79b3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\glad">
+      <UniqueIdentifier>{53b87007-b7a2-4f59-9729-79dbba409a76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\common">
+      <UniqueIdentifier>{b19ae8fb-0b5f-4ae8-8f71-c0337d1a8456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\imgui">
+      <UniqueIdentifier>{a3274831-27bd-40d0-a696-b7da5a31a39b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{621ddb58-875b-4f5d-aee0-81171c5e9a92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{a8b923ce-65d9-4dda-a62f-c8d9bde4c25a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\device">
+      <UniqueIdentifier>{3df46e86-d1e4-4d03-879a-82ab76d94b3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\device\ui">
+      <UniqueIdentifier>{2e1f30cb-83b9-4b70-90af-cfe67f5fc9ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\device\gpu">
+      <UniqueIdentifier>{2fb6efd6-38c4-4679-bb1a-400266c82cf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\device\ui\gl">
+      <UniqueIdentifier>{6bd76480-323a-425a-9f92-b51216214511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\device\ui\vk">
+      <UniqueIdentifier>{8747f43c-22cf-439d-aff1-66aa56005f37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\run">
+      <UniqueIdentifier>{7cf3643f-af9c-48ad-89b9-f4a26b1080b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\run\app">
+      <UniqueIdentifier>{bfba8e36-bddb-4dff-81d9-9811d417aac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\run\manager">
+      <UniqueIdentifier>{9291d37c-1c2a-4330-8ff3-36991007ebca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\run\util">
+      <UniqueIdentifier>{08264d99-5773-43b3-8ecd-61b0c15ad8a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\run\control">
+      <UniqueIdentifier>{73d22d1b-25f9-4bea-be96-05630a04bb56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\com">
+      <UniqueIdentifier>{3d352f41-e7ec-4904-82b3-1c8021725f7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\device\gpu\vk">
+      <UniqueIdentifier>{2f2c52c9-5de8-472c-a65b-f093b9e6c810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\device\gpu\gl">
+      <UniqueIdentifier>{4a440e54-82e5-4924-8e71-147fd172356c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\device\gpu\gl\common">
+      <UniqueIdentifier>{7cc44ca2-ea55-4a1e-9b98-676bf26c259f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\device\gpu\gl\shader">
+      <UniqueIdentifier>{833ab9dd-6f8a-4423-b5fa-83c6fe54e57f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\device\gpu\gl\render">
+      <UniqueIdentifier>{328a4acc-187b-4918-9080-c6c279978f4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\device\gpu\gl\texture">
+      <UniqueIdentifier>{1545d4a8-5ca6-4d65-8478-d98fa1acfbca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\actor">
+      <UniqueIdentifier>{1230c219-7188-44ed-a0ab-2987eeaa3c54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\visual">
+      <UniqueIdentifier>{d1000aad-eb72-46f1-a31a-163546000d5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\device\gpu\gl\manager">
+      <UniqueIdentifier>{7e14d73c-a0a2-422c-aa3f-e492ed284696}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\device\gpu\gl\load">
+      <UniqueIdentifier>{db38edab-32af-4f18-877d-66a6fef1a8c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\device\gpu\gl\camera">
+      <UniqueIdentifier>{5887b47e-54c5-482c-8f51-06b9e3b3fc45}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="include\glad\glad.c">
+      <Filter>include\glad</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui\imgui.cpp">
+      <Filter>include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui\imgui_demo.cpp">
+      <Filter>include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui\imgui_draw.cpp">
+      <Filter>include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui\imgui_tables.cpp">
+      <Filter>include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="include\imgui\imgui_widgets.cpp">
+      <Filter>include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\launcher.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="include\stb_image.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="src\device\ui\opengl\imgui_impl_opengl3.cpp">
+      <Filter>src\device\ui\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\device\ui\vulkan\imgui_impl_vulkan.cpp">
+      <Filter>src\device\ui\vk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\device\ui\imgui_impl_sdl3.cpp">
+      <Filter>src\device\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\device\profiler_device.cpp">
+      <Filter>src\device</Filter>
+    </ClCompile>
+    <ClCompile Include="src\com\file_system.cpp">
+      <Filter>src\com</Filter>
+    </ClCompile>
+    <ClCompile Include="src\device\gpu\gl\manager\resource_manager.cpp">
+      <Filter>src\device\gpu\gl\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\device\gpu\gl\load\assimp_loader.cpp">
+      <Filter>src\device\gpu\gl\load</Filter>
+    </ClCompile>
+    <ClCompile Include="src\device\gpu\gl\manager\model_manager.cpp">
+      <Filter>src\device\gpu\gl\manager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\glad\glad.h">
+      <Filter>include\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui\imconfig.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui\imgui.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui\imgui_internal.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui\imstb_rectpack.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui\imstb_textedit.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\imgui\imstb_truetype.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stb_image.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\ui\opengl\imgui_impl_opengl3.h">
+      <Filter>src\device\ui\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\ui\opengl\imgui_impl_opengl3_loader.h">
+      <Filter>src\device\ui\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\ui\vulkan\imgui_impl_vulkan.h">
+      <Filter>src\device\ui\vk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\ui\imgui_impl_sdl3.h">
+      <Filter>src\device\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\ui\aprofiler_ui.h">
+      <Filter>src\device\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\profiler_device.h">
+      <Filter>src\device</Filter>
+    </ClInclude>
+    <ClInclude Include="src\run\app\profile_app.h">
+      <Filter>src\run\app</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\common\gl_gpu_define.h">
+      <Filter>src\device\gpu\gl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\common\gl_element.h">
+      <Filter>src\device\gpu\gl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\shader\gl_shader.h">
+      <Filter>src\device\gpu\gl\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\render\gl_render.h">
+      <Filter>src\device\gpu\gl\render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\texture\gl_texture.h">
+      <Filter>src\device\gpu\gl\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\actor\actor.h">
+      <Filter>src\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\visual\profiler_visual.h">
+      <Filter>src\visual</Filter>
+    </ClInclude>
+    <ClInclude Include="src\com\file_system.h">
+      <Filter>src\com</Filter>
+    </ClInclude>
+    <ClInclude Include="src\run\util\extracter.h">
+      <Filter>src\run\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\common\gl_primitive.h">
+      <Filter>src\device\gpu\gl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\common\gl_buffer.h">
+      <Filter>src\device\gpu\gl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\manager\resource_manager.h">
+      <Filter>src\device\gpu\gl\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\load\assimp_loader.h">
+      <Filter>src\device\gpu\gl\load</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\manager\model_manager.h">
+      <Filter>src\device\gpu\gl\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\camera\camera.h">
+      <Filter>src\device\gpu\gl\camera</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
