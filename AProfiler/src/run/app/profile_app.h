@@ -26,6 +26,8 @@ namespace APROFILER {
 			}
 			Create();
 			Init();
+
+			
 		}
 
 		virtual void Create() {
@@ -37,7 +39,7 @@ namespace APROFILER {
 
 		virtual void Init() {
 			profilerDevice->MakeContextForDevice();
-			actor = new ACTOR::ModelActor();
+			actor = new ACTOR::TargetActor();
 			actor->MakeActor();
 		}
 
@@ -46,6 +48,7 @@ namespace APROFILER {
 				SDL_Event event;
 				while (SDL_PollEvent(&event)) {
 					done = profilerDevice->ProcessEvent(event);
+				
 				}
 				if (profilerDevice->ConfigMinSizeIFNeed()) {
 					SDL_Delay(10);
@@ -64,6 +67,7 @@ namespace APROFILER {
 			}
 		}
 
+		
 	private:
 		ProfilerDevice* profilerDevice = nullptr;
 		ACTOR::Actor* actor = nullptr;

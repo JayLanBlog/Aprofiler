@@ -85,6 +85,9 @@
     <Filter Include="src\device\gpu\gl\camera">
       <UniqueIdentifier>{5887b47e-54c5-482c-8f51-06b9e3b3fc45}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\device\gpu\gl\refer">
+      <UniqueIdentifier>{dd760890-2eaf-4900-b475-5b4eee8bbe8e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="include\glad\glad.c">
@@ -134,6 +137,9 @@
     </ClCompile>
     <ClCompile Include="src\device\gpu\gl\manager\model_manager.cpp">
       <Filter>src\device\gpu\gl\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\device\gpu\gl\common\gl_frame_bffer.cpp">
+      <Filter>src\device\gpu\gl\common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -226,6 +232,30 @@
     </ClInclude>
     <ClInclude Include="src\device\gpu\gl\camera\camera.h">
       <Filter>src\device\gpu\gl\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\common\gl_render_target.h">
+      <Filter>src\device\gpu\gl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\ui\aprofile_vk_ui.h">
+      <Filter>src\device\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\common\gl_frame_buffer.h">
+      <Filter>src\device\gpu\gl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\common\gl_attachment.h">
+      <Filter>src\device\gpu\gl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\common\gl_render_bffer.h">
+      <Filter>src\device\gpu\gl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\render\gl_reference_render.h">
+      <Filter>src\device\gpu\gl\render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\refer\mesh.h">
+      <Filter>src\device\gpu\gl\refer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\device\gpu\gl\refer\model.h">
+      <Filter>src\device\gpu\gl\refer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

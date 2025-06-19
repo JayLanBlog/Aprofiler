@@ -67,7 +67,7 @@ namespace APROFILER {
 	private:
 		//window
 		SDL_Window* sdlWindow = nullptr;
-		float windowWidth = 1280, windowHeight = 720;
+		float windowWidth = 800, windowHeight = 600;
 		AProflierUI* profile_ui;
 		SDL_GLContext gl_context = nullptr;
 		//comment data

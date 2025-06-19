@@ -5,6 +5,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include <device/gpu/gl/render/gl_reference_render.h>
 using namespace APROFILER::GL;
 
 
@@ -77,6 +78,29 @@ namespace APROFILER {
 				render->Draw();
 			}
 		};
+
+		class TargetActor : public Actor {
+		public:
+			Camera* camera;
+			TargetRender* tRender;
+			TargetActor() {
+				camera = new Camera(glm::vec3(0.0f, 0.0f,5.0f));
+				tRender = new TargetRender();
+			}
+
+			virtual void MakeActor() {
+				ModelManager* manager = ModelManager::getManager();
+				tRender->LoadModel(&manager->models[0]);
+				tRender->MakeTarget();
+				tRender->CreateNoiseTexture();
+				tRender->PrepareShaderParam();
+			}
+			virtual void Draw() {
+				tRender->Draw(*camera);
+			}
+		};
+
+
 
 		class PointActor : public Actor {
 		public:

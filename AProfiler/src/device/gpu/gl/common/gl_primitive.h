@@ -60,6 +60,7 @@ namespace APROFILER {
 					glEnableVertexAttribArray(id);
 					id++;
 				}
+			   // auto a =	GL_COLOR_ATTACHMENT0 + 1;
 				glBindBuffer(GL_ARRAY_BUFFER, 0);
 				// You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
 				// VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.

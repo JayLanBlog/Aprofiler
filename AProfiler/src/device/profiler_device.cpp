@@ -89,7 +89,7 @@ namespace APROFILER {
 			ImGui::End();
 		}
 		profile_ui->EndUIFrme();
-		UpdareViewPort(ImVec4(0, 0, windowWidth,windowHeight), clear_color);
+		//UpdareViewPort(ImVec4(0, 0, windowWidth,windowHeight), clear_color);
 	}
 	
 	void ProfilerGLDevice::SubmitForPresent() {
@@ -122,6 +122,7 @@ namespace APROFILER {
 			close = true;
 		if (event.type == SDL_EVENT_WINDOW_CLOSE_REQUESTED && event.window.windowID == SDL_GetWindowID(sdlWindow))
 			close = true;
+
 		return close;
 	}
 

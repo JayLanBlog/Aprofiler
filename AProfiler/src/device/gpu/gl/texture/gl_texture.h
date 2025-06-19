@@ -7,6 +7,17 @@
 namespace APROFILER {
 
 	namespace GL {
+		struct TextureOpts
+		{
+			GLint min = GL_NEAREST;
+			GLint mag = GL_NEAREST;
+			GLint wrap_s = GL_REPEAT;
+			GLint wrap_t = GL_REPEAT;
+			GLint type = GL_FLOAT;
+
+			int Width, Height;
+		};
+
 
 		class Texture {
 		public:
@@ -51,6 +62,22 @@ namespace APROFILER {
 				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, TEXTUREFILTERS[static_cast<int>(minFilter)]);
 				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, TEXTUREFILTERS[static_cast<int>(magFilter)]);
 			}
+			// 4, 4,GL_NEAREST,GL_NEAREST,GL_REPEAT,GL_REPEAT,GL_RGBA32F,GL_RGB,GL_FLOAT,&ssaoNoise[0]
+
+			void Make(int w,int h,GLint min, GLint mag, GLint wrap_s, GLint wrap_t, GLint insternalFormat, GLint format, GLenum t,void* data) {
+				Use();
+				glTexImage2D(GL_TEXTURE_2D, 0, insternalFormat, w, h, 0, format,t, data);
+				//	PFNGLGENERATEMIPMAPPROC();
+				glGenerateMipmap(GL_TEXTURE_2D);
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, wrap_s);
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrap_t);
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, min);
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, TEXTUREFILTERS[static_cast<int>(magFilter)]);
+			}
+
+			void Active(int index){
+				glActiveTexture(GL_TEXTURE0+index);
+			}
 
 			void ConfigTexture(TextureFilter min, TextureFilter mag, Wrap s, Wrap t, ColorSpace colorSpace, DataType dType) {
 				minFilter = min;
@@ -61,11 +88,12 @@ namespace APROFILER {
 				type = dType;
 			}
 			std::string name;
+			unsigned int texture_id = 0;
 		private:
 			
 			std::string mPath;
 			int width = 0, height = 0, nrComponents = 0;
-			unsigned int texture_id = 0;
+			
 			ColorSpace color = ColorSpace::RGB;
 			DataType type = DataType::UNSIGNED_BYTE;
 			TextureFilter minFilter = TextureFilter::MIPMAP_LINEAR;
